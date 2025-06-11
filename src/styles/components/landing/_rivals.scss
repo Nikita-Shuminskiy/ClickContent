@@ -1,0 +1,388 @@
+@use '../../mixin';
+.rivals {
+  padding-top: 250px;
+
+  &__title {
+    margin-bottom: 60px;
+
+    @include mixin.small-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    @include mixin.large {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+    }
+
+    @include mixin.mobile {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    &:first-child {
+      grid-row: span 2;
+      @include mixin.large {
+        grid-column: span 2;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    &:nth-child(2) {
+      @include mixin.large {
+        grid-column: span 2;
+      }
+    }
+
+    &:nth-child(5) {
+      @include mixin.large {
+        order: 1;
+        grid-column: -1 / 1;
+      }
+    }
+
+    &:nth-child(4),
+    &:last-child {
+      @include mixin.large {
+        grid-column: span 2;
+      }
+    }
+    @include mixin.small-tablet {
+      pointer-events: none;
+    }
+    @include mixin.mobile {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 40px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    border-radius: 32px;
+    background-color: rgba(255, 255, 255, 0.05);
+    min-height: 256px;
+    position: relative;
+
+    &--img {
+      justify-content: flex-start;
+    }
+
+    &--bottom {
+      justify-content: flex-end;
+    }
+
+    &--height {
+      min-height: 360px;
+    }
+
+    &--lock,
+    &--email {
+      background-repeat: no-repeat;
+      background-position: center left;
+    }
+
+    &--lock {
+      background-image: url("../assets/images/icons/lock.svg");
+      background-size: min(210px, 60%) 80%;
+
+      @include mixin.mobile {
+        background-size: min(140px, 60%) 80%;
+      }
+    }
+
+    &--email {
+      background-image: url("../assets/images/icons/mail.svg");
+      background-size: min(210px, 65%) 65%;
+
+      @include mixin.mobile {
+        background-size: min(140px, 65%) 65%;
+      }
+    }
+
+    @include mixin.large {
+      min-height: 270px;
+    }
+
+    @include mixin.tablet {
+      padding: 30px;
+    }
+
+    @include mixin.small-tablet {
+      min-height: 230px;
+    }
+
+    @include mixin.mobile {
+      min-height: 180px;
+    }
+  }
+
+  &__descr {
+    font-size: 31px;
+    font-weight: 600;
+
+    &--big {
+      font-size: 64px;
+    }
+
+    @include mixin.tablet {
+      font-size: 26px;
+
+      &--big {
+        font-size: 45px;
+      }
+    }
+
+    @include mixin.small-tablet {
+      font-size: 22px;
+      gap: 30px;
+
+      &--big {
+        font-size: 40px;
+      }
+    }
+
+    @include mixin.mobile {
+      font-size: 20px;
+      gap: 20px;
+
+      &--big {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 300;
+
+    @include mixin.tablet {
+      font-size: 20px;
+    }
+
+    @include mixin.small-tablet {
+      font-size: 18px;
+    }
+
+    @include mixin.mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__img {
+    max-width: min(350px, 90%);
+    width: 100%;
+    height: 62%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    border-radius: 32px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--procent {
+      border-radius: 0px 32px;
+
+      @include mixin.large {
+        width: 70%;
+        height: 55%;
+      }
+
+      @include mixin.mobile {
+        left: auto;
+        right: 0;
+        max-width: 100px;
+        border-radius: 32px 0;
+      }
+    }
+
+    &--partners {
+      height: 37%;
+      border-radius: 0px 32px 32px 32px;
+
+      @include mixin.mobile {
+        max-width: 100px;
+        height: 45%;
+        top: 0;
+        right: 0;
+        left: auto;
+        border-radius: 0 0 32px 32px;
+      }
+    }
+
+    &--sum {
+      width: 35%;
+      height: 80%;
+      left: auto;
+      right: 0;
+      top: 0;
+      border-radius: 0px 32px;
+    }
+  }
+
+  @include mixin.tablet {
+    padding-top: 200px;
+  }
+
+  @include mixin.small-tablet {
+    padding-top: 150px;
+  }
+
+  @include mixin.mobile {
+    padding-top: 100px;
+  }
+
+  // overflow: hidden;
+  // position: relative;
+
+  // &::before {
+  //   content: "";
+  //   width: 140px;
+  //   height: 140px;
+  //   background-image: url("../images/icons/arrow-rivals.svg");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: center;
+  //   position: absolute;
+  //   top: 7%;
+  //   left: max(20px, (100% - 1400px)/2);
+  //   z-index: -1;
+  // }
+
+  // &__scroll {
+  //   padding-top: 20px;
+  //   padding-bottom: 30px;
+  //   overflow-x: auto;
+  // }
+
+  // &__table {
+  //   width: 100%;
+  //   display: grid;
+  //   grid-template-columns: 1fr;
+  //   position: relative;
+  // }
+
+  // &__row {
+  //   display: grid;
+  //   // grid-template-columns: 1fr 1fr repeat(3, 0.8fr);
+  //   grid-template-columns: repeat(2, minmax(310px, 1fr)) repeat(
+  //       3,
+  //       minmax(270px, 0.8fr)
+  //     );
+  //   grid-column-gap: 20px;
+
+  //   &:first-child .rivals__col:first-child::after {
+  //     content: "";
+  //     width: var(--col-width);
+  //     height: var(--box-height);
+  //     border: 2px dashed rgba(255, 255, 255, 0.6);
+  //     top: 0;
+  //     left: var(--left-width);
+  //     position: absolute;
+  //     border-radius: 50px;
+  //   }
+  // }
+
+  // &__col {
+  //   padding: 20px;
+  //   position: relative;
+
+  //   &:nth-child(2) {
+  //     &::before {
+  //       content: "";
+  //       width: 70%;
+  //       height: 1px;
+  //       background-color: rgba(#fff, 0.5);
+  //       position: absolute;
+  //       bottom: 0;
+  //       left: 50%;
+  //       transform: translateX(-50%);
+  //     }
+  //   }
+
+  //   &:nth-last-child(2),
+  //   &:nth-last-child(3) {
+  //     border-right: 1px solid rgba(#fff, 0.5);
+  //   }
+
+  //   &:first-child {
+  //     padding: 0;
+  //     padding-top: 20px;
+  //   }
+  // }
+
+  // .rivals__row:first-child .rivals__col {
+  //   border: none;
+
+  //   &::before {
+  //     display: none;
+  //   }
+  // }
+
+  // .rivals__row:last-child .rivals__col {
+  //   &::before {
+  //     display: none;
+  //   }
+  // }
+
+  // &__img {
+  //   max-width: 45px;
+  //   width: 100%;
+  //   margin: 0 auto;
+
+  //   &--big {
+  //     max-width: 100px;
+  //   }
+
+  //   &--donate {
+  //     max-width: 184px;
+  //   }
+
+  //   img {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: contain;
+  //   }
+  // }
+
+  // &__subtitle {
+  //   font-size: 28px;
+  //   font-weight: 700;
+  // }
+
+  // &__descr {
+  //   text-align: center;
+  //   color: rgba(#fff, 0.5);
+
+  //   &--white {
+  //     color: #fff;
+  //   }
+  // }
+
+  // @include mixin.small-tablet {
+  //   display: none;
+  // }
+}

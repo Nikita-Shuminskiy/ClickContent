@@ -1,0 +1,81 @@
+@use '../../mixin';
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    @include mixin.mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__logo {
+    max-width: 160px;
+    width: 100%;
+
+    @include mixin.mobile {
+      max-width: 120px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 30px;
+
+    @include mixin.small-tablet {
+      gap: 15px;
+    }
+  }
+
+  &__btn {
+    &--padding {
+      padding: 0;
+    }
+
+    &--width {
+      max-width: 260px;
+      width: 100%;
+
+      @include mixin.small-tablet {
+        max-width: 150px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include mixin.mobile {
+      padding-top: 15px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__link {
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @include mixin.small-tablet {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

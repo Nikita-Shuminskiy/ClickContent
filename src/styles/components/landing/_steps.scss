@@ -1,0 +1,148 @@
+@use '../../mixin';
+.steps {
+  padding-top: 200px;
+  overflow: hidden;
+  position: relative;
+
+  // &::before {
+  //   content: "";
+  //   width: 135px;
+  //   height: 135px;
+  //   background-image: url("../images/icons/arrow.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   position: absolute;
+  //   top: 8%;
+  //   right: max(20px, (100% - 1400px)/2);
+  //   z-index: -1;
+
+  //   @include mixin.tablet {
+  //     display: none;
+  //   }
+  // }
+
+  &__title {
+    max-width: 800px;
+    margin-bottom: 60px;
+
+    @include mixin.small-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    grid-row-gap: 50px;
+    counter-increment: my-counter;
+    counter-reset: my-counter -1;
+    list-style-type: none;
+
+    @include mixin.tablet {
+      grid-gap: 30px;
+    }
+
+    @include mixin.mobile {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__item {
+    &:nth-last-child(2) {
+      align-items: flex-end;
+    }
+
+    @include mixin.mobile {
+      &:nth-child(even) {
+        .steps__box {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &__box {
+    max-width: 550px;
+    display: flex;
+    align-items: flex-end;
+
+    &--right {
+      margin-left: auto;
+    }
+
+    &::before {
+      content: "0" counter(my-counter);
+      counter-increment: my-counter;
+      display: block;
+      margin-right: -25%;
+      font-size: 250px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.05);
+
+      @include mixin.large {
+        font-size: 200px;
+      }
+
+      @include mixin.tablet {
+        font-size: 145px;
+      }
+
+      @include mixin.small-tablet {
+        font-size: 120px;
+      }
+    }
+
+    @include mixin.tablet {
+      max-width: 380px;
+    }
+
+    @include mixin.small-tablet {
+      max-width: 250px;
+    }
+
+    @include mixin.mobile {
+      &--right {
+        margin: 0;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 34px;
+
+    @include mixin.large {
+      font-size: 28px;
+    }
+
+    @include mixin.tablet {
+      font-size: 24px;
+    }
+
+    @include mixin.small-tablet {
+      font-size: 14px;
+    }
+
+    @include mixin.mobile {
+    }
+  }
+
+  @include mixin.large {
+    padding-top: 140px;
+  }
+
+  @include mixin.tablet {
+    padding-top: 100px;
+  }
+
+  @include mixin.small-tablet {
+    padding-top: 80px;
+  }
+
+  @include mixin.mobile {
+    padding-top: 50px;
+  }
+}

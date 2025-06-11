@@ -1,0 +1,79 @@
+@use '../mixin';
+.burgerBtnUI {
+  align-self: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 25px;
+  display: none;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform:
+    top 0.3s,
+    right 0.3s;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    background-color 0.3s ease;
+
+  &::before,
+  &::after,
+  &__line {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-radius: 3px;
+    background-color: #fff;
+    transition:
+      transform 0.3s ease-in,
+      opacity 0.3s ease-in;
+    position: absolute;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &__line {
+    right: 0;
+  }
+
+  // &--fixed {
+  //   width: 25px;
+  //   height: 25px;
+
+  //   &::before {
+  //     width: 80%;
+  //   }
+
+  //   background-color: $color-purple;
+  // }
+
+  &--active {
+    &::before {
+      top: auto;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: auto;
+      transform: rotate(-45deg);
+    }
+
+    .burgerBtnUI__line {
+      opacity: 0;
+    }
+  }
+
+  @include mixin.large-tablet {
+    width: 15px;
+    height: 11px;
+    display: flex;
+  }
+}

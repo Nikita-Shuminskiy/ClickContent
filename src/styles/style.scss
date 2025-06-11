@@ -1,0 +1,33 @@
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+@use "reset";
+@use "mixin";
+@use "fonts";
+@use "libs";
+@use "global";
+
+//small common
+@use "./components/checkboxUI";
+@use "./components/burgerBtnUI";
+@use "./components/headerMenu";
+@use "./components/modalUI";
+@use "./components/buttonUI";
+//@use "./components/calendar";
+@use "components/inputUI";
+@use "components/datePickerUI";
+@use "components/inputMaskUI";
+
+//Landing
+// @use "./common/Landing/buttonUI";
+@use "./components/landing/hero";
+@use "./components/landing/rivals";
+@use "./components/landing/benefits";
+@use "./components/landing/steps";
+@use "./components/landing/text-animation";
+@use "./components/landing/join";
+@use "./components/landing/footer";
+
+.no-scroll {
+  overflow: hidden !important;
+}

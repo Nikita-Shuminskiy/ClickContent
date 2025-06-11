@@ -1,0 +1,47 @@
+@use '../../mixin';
+.buttonUI {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px;
+  text-align: center;
+  background-color: #874ab0;
+  border-radius: 60px;
+  color: #fff;
+  transition: opacity 0.3s ease;
+
+  &--border {
+    border: 1px solid #fff;
+    background-color: transparent;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--bold {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include mixin.tablet {
+    font-size: 16px;
+
+    &--bold {
+      font-size: 18px;
+    }
+  }
+
+  // @include mixin.mobile {
+  //   font-size: 12px;
+  //   padding: 15px;
+
+  //   &--bold {
+  //     font-size: 14px;
+  //   }
+  // }
+}

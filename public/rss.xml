@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[ClickContent | Как монетизировать творчество]]></title>
+        <description><![CDATA[О монетизации контента для блогеров]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 15 Apr 2025 13:33:22 GMT</lastBuildDate>
+        <language><![CDATA[eu]]></language>
+    </channel>
+</rss>

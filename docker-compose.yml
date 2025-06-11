@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  react-client:
+    image: react-client-image
+    build:
+      context: react-app
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080

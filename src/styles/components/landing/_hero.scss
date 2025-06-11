@@ -1,0 +1,109 @@
+@use '../../mixin';
+.hero {
+  overflow: hidden;
+
+  &__container {
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+
+    @include mixin.mobile {
+      padding-top: 90px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 210px;
+
+    @include mixin.extra-large {
+      font-size: 100px;
+    }
+
+    @include mixin.tablet {
+      font-size: 74px;
+    }
+
+    @include mixin.small-tablet {
+      font-size: 55px;
+      margin-bottom: 160px;
+    }
+
+    @include mixin.mobile {
+      font-size: 28px;
+    }
+  }
+
+  &__box {
+    max-width: 590px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+    @include mixin.tablet {
+      max-width: 430px;
+    }
+
+    @include mixin.small-tablet {
+      max-width: 310px;
+    }
+  }
+
+  &__text {
+    font-size: 34px;
+    margin-bottom: 60px;
+
+    @include mixin.tablet {
+      font-size: 24px;
+    }
+
+    @include mixin.small-tablet {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include mixin.mobile {
+      max-width: 260px;
+    }
+  }
+
+  &__img {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include mixin.mobile {
+      height: 70%;
+    }
+  }
+
+  @include mixin.small-tablet {
+    padding-top: 40px;
+  }
+}

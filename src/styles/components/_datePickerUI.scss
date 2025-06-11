@@ -1,0 +1,90 @@
+.react-datepicker__input-container input {
+  width: 100%;
+  @media (max-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 20px
+  }
+  & {
+    padding: 30px 75px 30px 20px;
+      background-color: #1A1A1A;
+      border-radius: 1rem;
+      font-size: 14px;
+      font-weight: 400;
+      color: white;
+      position: relative;
+      z-index: 10;
+      border: 2px solid transparent;
+  }
+
+  &::placeholder {
+    opacity: 0;
+    color: rgba(white, 0.3);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.react-datepicker__month-container {
+  background-color: #1A1A1A;
+}
+.react-datepicker__input-container input:not(:placeholder-shown),
+.react-datepicker__input-container input:focus {
+  font-size: 16px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @media (max-width: 768px) {
+    padding-top: 30px;
+    padding-bottom: 10px
+  }
+  input + label {
+    top: 50%;
+    transition: top 0.3s ease-in;
+  }
+}
+.react-datepicker__input-container .datapicker-input-error {
+  border-color: #ef4444;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker__input-container.react-datepicker__view-calendar-icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+  right: 20px;
+  width: 24px;
+  height: 25px;
+  object-fit: cover;
+
+}
+.datePickerUI {
+  position: relative;
+
+  label {
+    font-size: 14px;
+    position: absolute;
+    left: 20px;
+    top: 40%;
+    max-width: calc(100% - 40px);
+    white-space: nowrap;
+    color: #FFFFFF4D;
+    overflow: hidden;
+    z-index: 10;
+    text-overflow: ellipsis;
+    transition: top 0.3s ease-in;
+    @media (max-width: 576px) {
+      font-size: 10px;
+    }
+  }
+  &_active {
+    label {
+      top: 23%;
+      transition: top 0.3s ease-in;
+    }
+  }
+}
+

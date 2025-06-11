@@ -1,0 +1,103 @@
+.modalUI {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 15px;
+  display: flex;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 2s ease,
+    visibility 0.3s ease,
+    background-color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition:
+      opacity 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  &__container {
+    display: inline-block;
+    position: relative;
+    max-width: 530px;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    cursor: default;
+    text-align: left;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 10;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 45%;
+      height: 2px;
+      border-radius: 2px;
+      background-color: rgba(#fff, 0.7);
+      position: absolute;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(135deg);
+    }
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+
+    &::before {
+      opacity: 1;
+    }
+
+    .modalUI__container {
+      transform: scale(1);
+    }
+  }
+
+  @media (orientation: landscape) {
+    padding-top: 55px;
+    padding-bottom: 30px;
+  }
+}
