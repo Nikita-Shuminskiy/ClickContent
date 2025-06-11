@@ -1,7 +1,12 @@
-@use '_mixin';
+@use "_mixin";
 
 @include mixin.font-woff2("Steppe", "Steppe-Regular", 400, normal);
 @include mixin.font-woff2("Steppe", "Steppe-Bold", 700, normal);
 @include mixin.font-woff2("VT323", "VT323-Regular", 400, normal);
 @include mixin.font-woff2("TTFirsNeue", "TTFirsNeue-Regular", 400, normal);
-@include mixin.font-woff2("PPNeueMachina", "NeueMachina-Ultrabold", 800, normal);
+@include mixin.font-woff2(
+  "PPNeueMachina",
+  "NeueMachina-Ultrabold",
+  800,
+  normal
+);

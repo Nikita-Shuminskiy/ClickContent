@@ -16,16 +16,16 @@ const CheckboxUI = ({
   ...rest
 }: CheckboxUIProps) => {
   return (
-    <label className='checkboxUI'>
+    <label className="checkboxUI">
       <input
-        className='sr-only checkboxUI__input'
-        type='checkbox'
+        className="sr-only checkboxUI__input"
+        type="checkbox"
         checked={checked}
         onChange={(e) => onChangeChecked(e.target.checked)}
         {...rest}
       />
-      <span className='checkboxUI__checked'></span>
-      <span className='checkboxUI__label'>{children || label}</span>
+      <span className="checkboxUI__checked"></span>
+      <span className="checkboxUI__label">{children || label}</span>
     </label>
   );
 };

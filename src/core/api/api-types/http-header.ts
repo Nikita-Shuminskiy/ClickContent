@@ -1,4 +1,4 @@
 export enum HttpHeader {
-  Authorization = 'Authorization',
-  XApiVersion= 'x-api-version',
+  Authorization = "Authorization",
+  XApiVersion = "x-api-version",
 }

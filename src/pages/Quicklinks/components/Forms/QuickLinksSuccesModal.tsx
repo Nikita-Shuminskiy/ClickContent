@@ -1,7 +1,7 @@
 ﻿import { Dispatch, SetStateAction } from "react";
 import { SuccessModalUI } from "@components/ui/SuccessModalUI";
-import {IQuickLinkDto} from "@/data-contracts.ts";
-import {createCopyQuickLink} from "@/helpers/CreateCopyLinks.ts";
+import { IQuickLinkDto } from "@/data-contracts.ts";
+import { createCopyQuickLink } from "@/helpers/CreateCopyLinks.ts";
 
 type QuickLinksSuccesModalProps = {
   edit: IQuickLinkDto;

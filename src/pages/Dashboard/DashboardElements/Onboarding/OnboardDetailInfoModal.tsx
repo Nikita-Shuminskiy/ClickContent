@@ -5,11 +5,11 @@ import closeIcon from "@assets/images/icons/close-white.svg";
 import applyIcon from "@assets/images/icons/apply-land.svg";
 import { OnboardingModalInfo } from "@/constants/onboarding.ts";
 import { useWindowWidth } from "@/hooks/useWindowWidth.ts";
-import { ButtonUI } from '@/components/ui/ButtonUI';
+import { ButtonUI } from "@/components/ui/ButtonUI";
 import {
   FooterPanelProps,
   OnboardDetailInfoModalProps,
-  StepViewProps
+  StepViewProps,
 } from "@/pages/Dashboard/DashboardElements/Onboarding/types.ts";
 
 const OnboardDetailInfoModal = ({
@@ -21,7 +21,7 @@ const OnboardDetailInfoModal = ({
   const [step, setStep] = useState(1);
   const stepData = OnboardingModalInfo[from][step];
 
-  const {isMobile} = useWindowWidth();
+  const { isMobile } = useWindowWidth();
   const stepsLength = Object.keys(OnboardingModalInfo[from]).length - 1;
   return (
     <Transition.Root show={isOpen} as={Fragment}>
@@ -170,14 +170,18 @@ const ListRender = ({ stepData, step }) => {
               </div>
             );
           })}
-            {
-                step !== 3 &&  <div className={"mt-[15px]"}>
-                    <p className={'text-[16px] font-["TTFirsNeue"]'}>И многое другое!</p>
-                </div>
-            }
+          {step !== 3 && (
+            <div className={"mt-[15px]"}>
+              <p className={'text-[16px] font-["TTFirsNeue"]'}>
+                И многое другое!
+              </p>
+            </div>
+          )}
         </>
       ) : (
-        stepData?.body && <p className={'text-[16px] font-["TTFirsNeue"]'}>{stepData?.body}</p>
+        stepData?.body && (
+          <p className={'text-[16px] font-["TTFirsNeue"]'}>{stepData?.body}</p>
+        )
       )}
     </>
   );
@@ -208,7 +212,7 @@ const FooterPanel = ({
   isMobile,
   onOpenQuickLinksModal,
   stepsLength,
-  onClose
+  onClose,
 }: FooterPanelProps) => {
   return (
     <div
@@ -234,7 +238,7 @@ const FooterPanel = ({
               type="button"
               className="flex w-[52px] h-[52px] outline-none bg-[#FFFFFF0D] rounded-[50%] items-center justify-center"
               onClick={() => {
-                if (currStep === 1) return onClose()
+                if (currStep === 1) return onClose();
                 setStep(currStep - 1);
               }}
               aria-label="Prev step"
@@ -277,6 +281,4 @@ const FooterPanel = ({
     </div>
   );
 };
-export default memo(OnboardDetailInfoModal)
-
-
+export default memo(OnboardDetailInfoModal);

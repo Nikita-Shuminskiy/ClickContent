@@ -1,7 +1,6 @@
-@use '../../../styles/mixin';
+@use "../../../styles/mixin";
 
-
-.react-datepicker.adsCalendar{
+.react-datepicker.adsCalendar {
   background-color: #202020;
 }
 .react-datepicker {
@@ -268,13 +267,13 @@
     left: 0;
     border-radius: 50%;
     background: var(
-                    --blue,
-                    linear-gradient(
-                                    0deg,
-                                    rgba(255, 255, 255, 0.2) 0%,
-                                    rgba(255, 255, 255, 0.2) 100%
-                    ),
-                    linear-gradient(181deg, #6747e9 26.85%, #4ca2cd 97.03%)
+      --blue,
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      ),
+      linear-gradient(181deg, #6747e9 26.85%, #4ca2cd 97.03%)
     );
   }
 
@@ -289,13 +288,13 @@
     left: 0;
     border-radius: 50%;
     background: var(
-                    --blue,
-                    linear-gradient(
-                                    0deg,
-                                    rgba(255, 255, 255, 0.2) 0%,
-                                    rgba(255, 255, 255, 0.2) 100%
-                    ),
-                    linear-gradient(181deg, #93abfb 26.85%, #6747e9 97.03%)
+      --blue,
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      ),
+      linear-gradient(181deg, #93abfb 26.85%, #6747e9 97.03%)
     );
   }
 
@@ -422,13 +421,13 @@
       left: 0;
       border-radius: 50%;
       background: var(
-                      --blue,
-                      linear-gradient(
-                                      0deg,
-                                      rgba(255, 255, 255, 0.2) 0%,
-                                      rgba(255, 255, 255, 0.2) 100%
-                      ),
-                      linear-gradient(181deg, #67b26f 26.85%, #4ca2cd 97.03%)
+        --blue,
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.2) 100%
+        ),
+        linear-gradient(181deg, #67b26f 26.85%, #4ca2cd 97.03%)
       );
     }
   }

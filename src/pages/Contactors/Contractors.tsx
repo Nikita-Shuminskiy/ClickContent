@@ -19,55 +19,55 @@ const selectValue = [
 
 const ContractorsSkeleton = () => {
   return (
-    <section className='pt-[80px] pb-[80px] max-sm:pt-[40px] max-sm:pb-[40px]'>
-      <div className='container'>
-        <div className='mb-10'>
-          <div className='max-w-[191px] mb-8 max-h-[58px] rounded-xl overflow-hidden'>
+    <section className="pt-[80px] pb-[80px] max-sm:pt-[40px] max-sm:pb-[40px]">
+      <div className="container">
+        <div className="mb-10">
+          <div className="max-w-[191px] mb-8 max-h-[58px] rounded-xl overflow-hidden">
             <SkeletonUI />
           </div>
-          <div className='w-full flex flex-wrap gap-4'>
-            <div className='max-h-[117px] w-full max-w-[318px] rounded-[32px] max-md:rounded-[20px] overflow-hidden'>
+          <div className="w-full flex flex-wrap gap-4">
+            <div className="max-h-[117px] w-full max-w-[318px] rounded-[32px] max-md:rounded-[20px] overflow-hidden">
               <SkeletonUI />
             </div>
-            <div className='max-h-[117px] w-full max-w-[318px] rounded-[32px] max-md:rounded-[20px] overflow-hidden'>
+            <div className="max-h-[117px] w-full max-w-[318px] rounded-[32px] max-md:rounded-[20px] overflow-hidden">
               <SkeletonUI />
             </div>
-            <div className='max-h-[117px] w-full max-w-[318px] rounded-[32px] max-md:rounded-[20px] overflow-hidden'>
+            <div className="max-h-[117px] w-full max-w-[318px] rounded-[32px] max-md:rounded-[20px] overflow-hidden">
               <SkeletonUI />
             </div>
           </div>
         </div>
-        <div className='max-w-[1096px] bg-[#141414] rounded-[30px] overflow-hidden p-10'>
-          <div className='flex justify-between gap-x-10 mb-8'>
-            <div className='max-w-[354px] w-full max-h-[29px] rounded-lg overflow-hidden'>
+        <div className="max-w-[1096px] bg-[#141414] rounded-[30px] overflow-hidden p-10">
+          <div className="flex justify-between gap-x-10 mb-8">
+            <div className="max-w-[354px] w-full max-h-[29px] rounded-lg overflow-hidden">
               <SkeletonUI />
             </div>
-            <div className='max-w-[214px] w-full max-h-[29px] rounded-lg overflow-hidden'>
-              <SkeletonUI />
-            </div>
-          </div>
-          <div className='flex justify-between max-sm:hidden mb-[11px]'>
-            <div className='max-w-[30px] max-h-[14px] rounded-lg max-md:rounded-[20px] overflow-hidden'>
-              <SkeletonUI />
-            </div>
-            <div className='max-w-[82px] max-h-[14px] rounded-lg overflow-hidden'>
-              <SkeletonUI />
-            </div>
-            <div className='max-w-[75px] max-h-[14px] rounded-lg overflow-hidden'>
-              <SkeletonUI />
-            </div>
-            <div className='max-w-[82px] max-h-[14px] rounded-lg overflow-hidden'>
+            <div className="max-w-[214px] w-full max-h-[29px] rounded-lg overflow-hidden">
               <SkeletonUI />
             </div>
           </div>
-          <div className='flex flex-col gap-5'>
-            <div className='max-w-[1016px] max-h-[43px] rounded-lg overflow-hidden'>
+          <div className="flex justify-between max-sm:hidden mb-[11px]">
+            <div className="max-w-[30px] max-h-[14px] rounded-lg max-md:rounded-[20px] overflow-hidden">
               <SkeletonUI />
             </div>
-            <div className='max-w-[1016px] max-h-[43px] rounded-lg overflow-hidden'>
+            <div className="max-w-[82px] max-h-[14px] rounded-lg overflow-hidden">
               <SkeletonUI />
             </div>
-            <div className='max-w-[1016px] max-h-[43px] rounded-lg overflow-hidden'>
+            <div className="max-w-[75px] max-h-[14px] rounded-lg overflow-hidden">
+              <SkeletonUI />
+            </div>
+            <div className="max-w-[82px] max-h-[14px] rounded-lg overflow-hidden">
+              <SkeletonUI />
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <div className="max-w-[1016px] max-h-[43px] rounded-lg overflow-hidden">
+              <SkeletonUI />
+            </div>
+            <div className="max-w-[1016px] max-h-[43px] rounded-lg overflow-hidden">
+              <SkeletonUI />
+            </div>
+            <div className="max-w-[1016px] max-h-[43px] rounded-lg overflow-hidden">
               <SkeletonUI />
             </div>
           </div>
@@ -98,15 +98,15 @@ const Contractors = () => {
       skeleton={<ContractorsSkeleton />}
     >
       <section
-        className='
-    pt-[80px] pb-[80px] max-sm:pt-[40px] max-sm:pb-[40px]'
+        className="
+    pt-[80px] pb-[80px] max-sm:pt-[40px] max-sm:pb-[40px]"
       >
-        <div className='container'>
-          <div className='mb-10'>
-            <h2 className='text-[32px] mb-8 font-bold max-md:text-2xl max-sm:text-lg'>
+        <div className="container">
+          <div className="mb-10">
+            <h2 className="text-[32px] mb-8 font-bold max-md:text-2xl max-sm:text-lg">
               Контрагенты
             </h2>
-            <div className='w-full flex flex-wrap gap-4'>
+            <div className="w-full flex flex-wrap gap-4">
               {persons?.map((person) => (
                 <button
                   className={`flex items-center justify-between gap-4 rounded-[32px] p-10 bg-color-vmire max-md:p-8 max-md:rounded-[20px] ${
@@ -117,39 +117,39 @@ const Contractors = () => {
                   key={person.id}
                   onClick={() => setSelectedPersons(person)}
                 >
-                  <span className='text-sm max-xs:text-xs'>
+                  <span className="text-sm max-xs:text-xs">
                     {person.name} / ИНН {person.inn}
                   </span>
                 </button>
               ))}
 
               <button
-                className='flex items-center gap-5 justify-between text-base font-bold rounded-[32px] p-10 border border-solid border-white/10 text-left max-md:p-8 max-md:rounded-[20px]'
+                className="flex items-center gap-5 justify-between text-base font-bold rounded-[32px] p-10 border border-solid border-white/10 text-left max-md:p-8 max-md:rounded-[20px]"
                 onClick={() => navigator("/ads?step=4&isContracts=true")}
               >
                 <span>Добавить контрагента</span>
-                <img src={plusIcon} aria-hidden='true' alt='Плюс' />
+                <img src={plusIcon} aria-hidden="true" alt="Плюс" />
               </button>
             </div>
           </div>
-          <div className='max-w-[1100px]'>
-            <div className='flex flex-col rounded-[30px] min-h-[400px] bg-color-vmire p-10 max-sm:p-0 max-sm:bg-transparent'>
+          <div className="max-w-[1100px]">
+            <div className="flex flex-col rounded-[30px] min-h-[400px] bg-color-vmire p-10 max-sm:p-0 max-sm:bg-transparent">
               {(selectedPersons || selectedPersons?.length > 0) && (
-                <div className='flex items-center gap-5 justify-between mb-8 max-sm:flex-col'>
-                  <h3 className='text-2xl max-w-[60%] max-sm:text-lg max-sm:self-start max-sm:max-w-full'>
-                    <span className='font-bold'>{selectedPersons?.name}</span> /
+                <div className="flex items-center gap-5 justify-between mb-8 max-sm:flex-col">
+                  <h3 className="text-2xl max-w-[60%] max-sm:text-lg max-sm:self-start max-sm:max-w-full">
+                    <span className="font-bold">{selectedPersons?.name}</span> /
                     ИНН
-                    <span className='font-normal'>{selectedPersons?.inn}</span>
+                    <span className="font-normal">{selectedPersons?.inn}</span>
                   </h3>
                   <button
-                    className='font-firstNeue flex items-center gap-1 max-sm:self-end'
+                    className="font-firstNeue flex items-center gap-1 max-sm:self-end"
                     onClick={() => navigator("/ads?step=6&isContracts=true")}
                   >
                     <img
-                      className='w-6 h-6 object-cover'
+                      className="w-6 h-6 object-cover"
                       src={plusIcon}
-                      aria-hidden='true'
-                      alt='Плюс'
+                      aria-hidden="true"
+                      alt="Плюс"
                     />
                     Добавить договор
                   </button>
@@ -159,56 +159,56 @@ const Contractors = () => {
               {(!contractsData ||
                 contractsData.length === 0 ||
                 (selectedPersons && selectedPersons?.length === 0)) && (
-                <span className='w-full flex-grow h-full flex items-center justify-center'>
+                <span className="w-full flex-grow h-full flex items-center justify-center">
                   Ничего не найдено
                 </span>
               )}
 
               {contractsData && contractsData?.length > 0 && (
                 <div>
-                  <div className='grid grid-cols-[1fr,_1.5fr,_1.3fr,_0.8fr,_0.2fr] items-center gap-4 mb-4 max-sm:hidden'>
-                    <span className='font-firstNeue text-[12px] text-white/70'>
+                  <div className="grid grid-cols-[1fr,_1.5fr,_1.3fr,_0.8fr,_0.2fr] items-center gap-4 mb-4 max-sm:hidden">
+                    <span className="font-firstNeue text-[12px] text-white/70">
                       Дата
                     </span>
-                    <span className='font-firstNeue text-[12px] text-white/70'>
+                    <span className="font-firstNeue text-[12px] text-white/70">
                       Номер договора
                     </span>
-                    <span className='font-firstNeue text-[12px] text-white/70'>
+                    <span className="font-firstNeue text-[12px] text-white/70">
                       Тип договора
                     </span>
-                    <span className='font-firstNeue text-[12px] text-white/70'>
+                    <span className="font-firstNeue text-[12px] text-white/70">
                       Сумма
                     </span>
-                    <span className='text-[12px] text-white/70'></span>
+                    <span className="text-[12px] text-white/70"></span>
                   </div>
-                  <ul className='grid gap-4 max-sm:gap-6'>
+                  <ul className="grid gap-4 max-sm:gap-6">
                     {contractsData?.map((contract) => (
                       <li key={contract.id}>
-                        <div className='grid grid-cols-[1fr,_1.5fr,_1.3fr,_0.8fr,_0.2fr] items-center gap-4 pb-3 border-b border-b-white/10 max-sm:grid-cols-1'>
-                          <div className='flex items-center justify-between gap-4'>
-                            <span className='font-firstNeue hidden text-[12px] text-white/70 max-sm:block'>
+                        <div className="grid grid-cols-[1fr,_1.5fr,_1.3fr,_0.8fr,_0.2fr] items-center gap-4 pb-3 border-b border-b-white/10 max-sm:grid-cols-1">
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="font-firstNeue hidden text-[12px] text-white/70 max-sm:block">
                               Дата
                             </span>
                             <time
-                              className='font-firstNeue flex flex-col text-[12px] max-sm:items-end'
-                              data-time='312'
+                              className="font-firstNeue flex flex-col text-[12px] max-sm:items-end"
+                              data-time="312"
                             >
                               {formatDate(contract.created.substring(0, 10))}
                             </time>
                           </div>
-                          <div className='flex items-center justify-between gap-4'>
-                            <span className='font-firstNeue hidden text-[12px] text-white/70 max-sm:block'>
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="font-firstNeue hidden text-[12px] text-white/70 max-sm:block">
                               Номер договора
                             </span>
-                            <span className='font-firstNeue text-base max-sm:text-right line-clamp-2'>
+                            <span className="font-firstNeue text-base max-sm:text-right line-clamp-2">
                               № {contract.serial}
                             </span>
                           </div>
-                          <div className='flex items-center justify-between gap-4 w-full overflow-hidden'>
-                            <span className='font-firstNeue hidden text-[12px] text-white/70 max-sm:block'>
+                          <div className="flex items-center justify-between gap-4 w-full overflow-hidden">
+                            <span className="font-firstNeue hidden text-[12px] text-white/70 max-sm:block">
                               Тип договора
                             </span>
-                            <div className='font-firstNeue flex items-center gap-2 overflow-hidden'>
+                            <div className="font-firstNeue flex items-center gap-2 overflow-hidden">
                               {
                                 selectValue?.find(
                                   (option) =>
@@ -218,25 +218,25 @@ const Contractors = () => {
                               }
                             </div>
                           </div>
-                          <div className='flex items-center justify-between gap-4'>
-                            <span className='font-firstNeue hidden text-[12px] text-white/70 max-sm:block'>
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="font-firstNeue hidden text-[12px] text-white/70 max-sm:block">
                               Сумма
                             </span>
                             <span>
                               {getCorrectPrice(contract.amount / 100 || 0)}
                             </span>
                           </div>
-                          <div className='flex flex-wrap justify-end items-center gap-[10px]'>
+                          <div className="flex flex-wrap justify-end items-center gap-[10px]">
                             <Menu
-                              as='div'
-                              className='relative inline-block text-left'
+                              as="div"
+                              className="relative inline-block text-left"
                             >
                               <div>
                                 <Menu.Button
-                                  className='rotate-90'
-                                  aria-label='редактировать'
+                                  className="rotate-90"
+                                  aria-label="редактировать"
                                 >
-                                  <span className='text-2xl'>...</span>
+                                  <span className="text-2xl">...</span>
                                 </Menu.Button>
                               </div>
 

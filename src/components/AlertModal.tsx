@@ -48,7 +48,7 @@ const AlertModal = ({
   image,
   onCloseButtonText,
   icon,
-  dangerouslySetInnerHTML
+  dangerouslySetInnerHTML,
 }: AlertModalProps) => {
   const location = useLocation();
   return (
@@ -63,8 +63,8 @@ const AlertModal = ({
       }}
     >
       {icon && (
-        <div className='max-w-[64px] max-h-16 mx-auto mb-4'>
-          <img className='w-full h-full object-cover' src={icon} alt="icon" />
+        <div className="max-w-[64px] max-h-16 mx-auto mb-4">
+          <img className="w-full h-full object-cover" src={icon} alt="icon" />
         </div>
       )}
       {image && (
@@ -86,11 +86,18 @@ const AlertModal = ({
               <FakeProgressBar />
             </div>
           )}
-          {dangerouslySetInnerHTML ? <p dangerouslySetInnerHTML={{ __html: text }} className={`text-2xl text-center max-sm:text-sm font-steppe self-center`} /> :
-            <p className={`text-2xl text-center max-sm:text-sm font-steppe self-center`}>
+          {dangerouslySetInnerHTML ? (
+            <p
+              dangerouslySetInnerHTML={{ __html: text }}
+              className={`text-2xl text-center max-sm:text-sm font-steppe self-center`}
+            />
+          ) : (
+            <p
+              className={`text-2xl text-center max-sm:text-sm font-steppe self-center`}
+            >
               {text}
             </p>
-          }
+          )}
         </div>
         <div
           className={`flex items-center gap-4 justify-center ${
@@ -101,10 +108,10 @@ const AlertModal = ({
             location.pathname !== "/passport" &&
             hasCanselBtn && (
               <ButtonUI
-                variant='border'
-                className={`font-manrope ${!okButtonText ? 'max-w-[240px]' : ''} ${
-                  classNameBtnCancel ? classNameBtnCancel : ""
-                }`}
+                variant="border"
+                className={`font-manrope ${
+                  !okButtonText ? "max-w-[240px]" : ""
+                } ${classNameBtnCancel ? classNameBtnCancel : ""}`}
                 onClick={() => {
                   onCancelButtonClick?.();
                   onCloseModal?.();
@@ -117,9 +124,9 @@ const AlertModal = ({
           {typeof okButtonText === "string" ? (
             <ButtonUI
               variant={variantOkButtonText}
-              className={`font-manrope outline-none ${!hasCanselBtn ? 'max-w-[240px]' : ''} ${
-                classNameBtnOk ? classNameBtnOk : ""
-              }`}
+              className={`font-manrope outline-none ${
+                !hasCanselBtn ? "max-w-[240px]" : ""
+              } ${classNameBtnOk ? classNameBtnOk : ""}`}
               onClick={() => {
                 onOkButtonClick?.();
                 setOpen?.(false);

@@ -1,5 +1,5 @@
-import { MouseEvent } from 'react'
+import { MouseEvent } from "react";
 
 export interface PublicationPageButtonProps {
-    handleLogin?: (e: MouseEvent<HTMLButtonElement>) => void
+  handleLogin?: (e: MouseEvent<HTMLButtonElement>) => void;
 }

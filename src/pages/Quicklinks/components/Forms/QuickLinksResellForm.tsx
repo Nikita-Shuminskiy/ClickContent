@@ -7,8 +7,8 @@ import StorageService from "@/core/service/storage-service.ts";
 import { ButtonUI } from "@components/ui/ButtonUI";
 import { ErrorApiUI } from "@components/ui/ErrorApiUI";
 import { FormInputUI } from "@components/ui/InputUI";
-import {IQuickLinkDto} from "@/data-contracts.ts";
-import {useQuickLinkCreate} from "@/core/api/api-hooks/ui/quick-link/use-quick-link-create.ts";
+import { IQuickLinkDto } from "@/data-contracts.ts";
+import { useQuickLinkCreate } from "@/core/api/api-hooks/ui/quick-link/use-quick-link-create.ts";
 
 const QuickLinksResellForm = ({
   onSuccess,
@@ -23,7 +23,7 @@ const QuickLinksResellForm = ({
     mutateAsync: createQuickLinks,
     error: isErrorCreate,
     isPending: isMutating,
-    isError
+    isError,
   } = useQuickLinkCreate();
 
   const onSubmitForm = async (data) => {
@@ -38,7 +38,7 @@ const QuickLinksResellForm = ({
 
     if (res) {
       onSuccess(res, true);
-      resetForm()
+      resetForm();
     }
   };
 
@@ -95,50 +95,51 @@ const QuickLinksResellForm = ({
       title: edit?.title,
       description: edit?.description,
       thanksText: edit?.thanksText,
-      recommendedPayment: edit?.recommendedPayment ? String(edit?.recommendedPayment) : '',
+      recommendedPayment: edit?.recommendedPayment
+        ? String(edit?.recommendedPayment)
+        : "",
     },
   });
-
 
   return (
     <form onSubmit={handleSubmit(onSubmitForm)}>
       <ErrorApiUI error={isError} />
-      <div className='flex gap-8 mb-8 max-sm:flex-col'>
-        <div className='flex-grow flex flex-col gap-2'>
+      <div className="flex gap-8 mb-8 max-sm:flex-col">
+        <div className="flex-grow flex flex-col gap-2">
           <FormInputUI
             control={control}
-            name='resellId'
-            label='Ссылка на контент'
+            name="resellId"
+            label="Ссылка на контент"
             disabled={!!edit?.resellQuicklinkId}
-            placeholder='Ссылка на контент'
+            placeholder="Ссылка на контент"
           />
           <FormInputUI
             control={control}
-            name='title'
-            label='Название ссылки'
-            placeholder='Название'
+            name="title"
+            label="Название ссылки"
+            placeholder="Название"
           />
           <FormInputUI
             control={control}
-            name='description'
-            label='Описание ссылки(не обязательно)'
-            placeholder='Описание (не обязательно)'
+            name="description"
+            label="Описание ссылки(не обязательно)"
+            placeholder="Описание (не обязательно)"
           />
           <FormInputUI
             control={control}
-            name='amount'
-            label='Стоимость'
+            name="amount"
+            label="Стоимость"
             placeholder={`Ваша наценка (без учёта номинальной стоимости)`}
           />
           <FormInputUI
             control={control}
-            name='thanksText'
-            label='Благодарственный текст'
-            placeholder='Сообщение пользователю после оплаты'
+            name="thanksText"
+            label="Благодарственный текст"
+            placeholder="Сообщение пользователю после оплаты"
           />
         </div>
       </div>
-      <div className='max-w-[180px] max-sm:max-w-[100%] w-full'>
+      <div className="max-w-[180px] max-sm:max-w-[100%] w-full">
         <ButtonUI
           isLoading={isMutating}
           disabled={!isValid}

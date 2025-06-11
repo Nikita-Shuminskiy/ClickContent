@@ -14,12 +14,12 @@ const CheckboxToggleUI = ({
   ...rest
 }: CheckboxToggleUIProps) => {
   return (
-    <label className='relative inline-flex items-center cursor-pointer'>
-      <span className='sr-only'>{label}</span>
+    <label className="relative inline-flex items-center cursor-pointer">
+      <span className="sr-only">{label}</span>
       <input
-        type='checkbox'
-        value=''
-        className='sr-only peer'
+        type="checkbox"
+        value=""
+        className="sr-only peer"
         checked={checked}
         onChange={(e) => onChangeChecked(e.target.checked)}
         {...rest}

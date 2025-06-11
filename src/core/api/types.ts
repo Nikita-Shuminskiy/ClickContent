@@ -1,4 +1,4 @@
-import type { API_ENDPOINTS } from "./constants/api-endpoints"
+import type { API_ENDPOINTS } from "./constants/api-endpoints";
 
 type Primitive = string | number | symbol;
 
@@ -11,12 +11,13 @@ type GenericObject = Record<Primitive, unknown>;
  * type Keys = NestedPaths<{ a: { b: { c: string } }>
  * // 'a' | 'a.b' | 'a.b.c'
  */
-type NestedPaths<T extends GenericObject, Path extends string = ''> = {
-    [K in keyof T]: T[K] extends GenericObject
-        ? `${Path}${Path extends '' ? '' : '.'}${K & string}` | NestedPaths<T[K], `${Path}${Path extends '' ? '' : '.'}${K & string}`>
-        : `${Path}${Path extends '' ? '' : '.'}${K & string}`
+type NestedPaths<T extends GenericObject, Path extends string = ""> = {
+  [K in keyof T]: T[K] extends GenericObject
+    ?
+        | `${Path}${Path extends "" ? "" : "."}${K & string}`
+        | NestedPaths<T[K], `${Path}${Path extends "" ? "" : "."}${K & string}`>
+    : `${Path}${Path extends "" ? "" : "."}${K & string}`;
 }[keyof T];
-
 
 /**
  * StringNestedPaths
@@ -25,7 +26,9 @@ type NestedPaths<T extends GenericObject, Path extends string = ''> = {
  * type Keys = StringNestedPaths<{ a: { b: { c: string } }>
  * // 'a.b.c'
  */
-type StringNestedPaths<T extends GenericObject> = NestedPaths<T> extends infer D ? Extract<D, string> : never;
+type StringNestedPaths<T extends GenericObject> = NestedPaths<T> extends infer D
+  ? Extract<D, string>
+  : never;
 
 /**
  * TypeFromPath
@@ -35,17 +38,17 @@ type StringNestedPaths<T extends GenericObject> = NestedPaths<T> extends infer D
  * // { c: string }
  */
 export type TypeFromPath<
-    T extends GenericObject,
-    Path extends string, // Or, if you prefer, NestedPaths<T>
+  T extends GenericObject,
+  Path extends string, // Or, if you prefer, NestedPaths<T>
 > = {
-    [K in Path]: K extends keyof T
-        ? T[K]
-        : K extends `${infer P}.${infer S}`
-            ? T[P] extends GenericObject
-                ? TypeFromPath<T[P], S>
-                : never
-            : never
-}[Path]
+  [K in Path]: K extends keyof T
+    ? T[K]
+    : K extends `${infer P}.${infer S}`
+    ? T[P] extends GenericObject
+      ? TypeFromPath<T[P], S>
+      : never
+    : never;
+}[Path];
 
 /**
  * StringNestedPaths
@@ -55,34 +58,34 @@ export type TypeFromPath<
  * // 'a.b.c'
  */
 
-type ApiObjectPath = StringNestedPaths<typeof API_ENDPOINTS>
+type ApiObjectPath = StringNestedPaths<typeof API_ENDPOINTS>;
 
 export type ApiRequest<
-    TUrlApiObjectPath extends ApiObjectPath,
-    TUrlVariables,
-    TBody,
-    TResponse,
+  TUrlApiObjectPath extends ApiObjectPath,
+  TUrlVariables,
+  TBody,
+  TResponse,
 > = {
-    urlApiObjectPath: TUrlApiObjectPath
-    urlVariables?: TUrlVariables
-    urlParams?: GenericObject
-    urlPrefix?: string
-    body?: TBody
-    response: TResponse
-    headers?: any
-    cancelToken?: any
-    signal?: AbortSignal
-}
+  urlApiObjectPath: TUrlApiObjectPath;
+  urlVariables?: TUrlVariables;
+  urlParams?: GenericObject;
+  urlPrefix?: string;
+  body?: TBody;
+  response: TResponse;
+  headers?: any;
+  cancelToken?: any;
+  signal?: AbortSignal;
+};
 
-export type InheritedApiRequest = ApiRequest<any, any, any, any>
+export type InheritedApiRequest = ApiRequest<any, any, any, any>;
 
 export type RequestParams<TApiRequest extends InheritedApiRequest> = {
-    url: TypeFromPath<typeof API_ENDPOINTS, TApiRequest['urlApiObjectPath']>
-    urlVariables?: TApiRequest['urlVariables']
-    urlParams?: any
-    urlPrefix?: string
-    body?: TApiRequest['body']
-    headers?: TApiRequest['headers']
-    cancelToken?: TApiRequest['cancelToken']
-    signal?: TApiRequest['signal']
-}
+  url: TypeFromPath<typeof API_ENDPOINTS, TApiRequest["urlApiObjectPath"]>;
+  urlVariables?: TApiRequest["urlVariables"];
+  urlParams?: any;
+  urlPrefix?: string;
+  body?: TApiRequest["body"];
+  headers?: TApiRequest["headers"];
+  cancelToken?: TApiRequest["cancelToken"];
+  signal?: TApiRequest["signal"];
+};

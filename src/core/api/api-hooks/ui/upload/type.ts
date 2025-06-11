@@ -1,25 +1,23 @@
 export interface IChunkUploadRequest {
-    fileId: string
-    files: any
+  fileId: string;
+  files: any;
 }
 export interface IChunkUploadDto {
-    "fileId": string
-    "chunkId": string
-    "chunkGuid": string
+  fileId: string;
+  chunkId: string;
+  chunkGuid: string;
 }
 
 export interface IChunkInitDto {
-    "stage": string
-    "fileId": string
+  stage: string;
+  fileId: string;
 }
-
-
 
 export interface IChunkCompleteDto {
-    "id": string
-    "link": string
+  id: string;
+  link: string;
 }
 export interface IChunkUploadCompleteRequest {
-    fileId: string
-    chunkList: string[]
+  fileId: string;
+  chunkList: string[];
 }

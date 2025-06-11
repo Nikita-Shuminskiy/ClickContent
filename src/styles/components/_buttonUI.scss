@@ -1,4 +1,4 @@
-@use '../mixin';
+@use "../mixin";
 
 .buttonUI {
   width: 100%;
@@ -16,7 +16,7 @@
   transition: opacity 0.3s ease;
 
   &--border {
-    border: 1px solid #FFFFFF1A;
+    border: 1px solid #ffffff1a;
     background-color: transparent;
 
     &:disabled {
@@ -29,7 +29,7 @@
   }
 
   &--muted {
-    background-color: #1A1A1A;
+    background-color: #1a1a1a;
   }
 
   &--bold {
@@ -55,11 +55,11 @@
     }
 
     .prefix_button img {
-      opacity: .3;
+      opacity: 0.3;
     }
 
     img {
-      opacity: .3;
+      opacity: 0.3;
     }
   }
 

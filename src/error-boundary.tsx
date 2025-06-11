@@ -1,48 +1,45 @@
-import React, { ErrorInfo, ReactNode, Suspense } from 'react';
+import React, { ErrorInfo, ReactNode, Suspense } from "react";
 import PageError from "./pages/NotFound/PageError.tsx";
 
-
-
 interface ErrorBoundaryProps {
-	children: ReactNode;
+  children: ReactNode;
 }
 
 interface ErrorBoundaryState {
-	hasError: boolean;
+  hasError: boolean;
 }
 
 class ErrorBoundary extends React.Component<
-	ErrorBoundaryProps,
-	ErrorBoundaryState
+  ErrorBoundaryProps,
+  ErrorBoundaryState
 > {
-	constructor(props: ErrorBoundaryProps) {
-		super(props);
-		this.state = { hasError: false };
-	}
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-	static getDerivedStateFromError() {
-		return { hasError: true };
-	}
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
 
-	public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-		console.log('Unhandled errors: ', error, errorInfo);
-	}
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.log("Unhandled errors: ", error, errorInfo);
+  }
 
-	public render(): ReactNode {
-		const { hasError } = this.state;
-		const { children } = this.props;
+  public render(): ReactNode {
+    const { hasError } = this.state;
+    const { children } = this.props;
 
-		if (hasError) {
-			return (
-				<Suspense fallback="">
-					<PageError />
-				</Suspense>
-			);
-		}
+    if (hasError) {
+      return (
+        <Suspense fallback="">
+          <PageError />
+        </Suspense>
+      );
+    }
 
-		return children;
-	}
+    return children;
+  }
 }
 
 export default ErrorBoundary;
-

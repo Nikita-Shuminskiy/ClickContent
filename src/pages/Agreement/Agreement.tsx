@@ -1,15 +1,15 @@
 const Agreement = () => {
   return (
-    <section className='pt-28 pb-8'>
-      <div className='container'>
-        <h1 className='text-4xl text-center font-bold mb-10 max-sm:text-2xl max-sm:mb-6'>
+    <section className="pt-28 pb-8">
+      <div className="container">
+        <h1 className="text-4xl text-center font-bold mb-10 max-sm:text-2xl max-sm:mb-6">
           Пользовательское соглашение
         </h1>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Условия использования
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>Добро пожаловать в VMIRE!</p>
             <p>
               Настоящие Условия использования ("Условия") регулируют
@@ -26,28 +26,28 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Исходные данные
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>Разработчик Мутовкин Евгений Вадимович</p>
             <p>
               Связаться по электронной почте:{" "}
               <a
-                className='text-[#874AB0]'
-                href='mailto:mutovkinindustries@gmail.com'
+                className="text-[#874AB0]"
+                href="mailto:mutovkinindustries@gmail.com"
               >
                 mutovkinindustries@gmail.com
               </a>
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Сервис VMIRE
           </h2>
-          <div className='flex flex-col gap-2 mb-7'>
+          <div className="flex flex-col gap-2 mb-7">
             <p>
               Мы соглашаемся предоставлять вам Сервис VMIRE. Сервис включает в
               себя все продукты, функции, приложения, сервисы, технологии и
@@ -56,14 +56,14 @@ const Agreement = () => {
               вещам. Сервис включает следующие компоненты:
             </p>
           </div>
-          <div className='flex flex-col gap-5 pl-8'>
+          <div className="flex flex-col gap-5 pl-8">
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Предложение персонализированной возможности создавать контент,
                 общаться, узнавать новое и обмениваться опытом и впечатлениями с
                 другими людьми.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Люди разные. Мы хотим, чтобы у вас была возможность укреплять
                   отношения с другими людьми, делясь впечатлениями и рассказывая
@@ -80,10 +80,10 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Создание благоприятной, открытой для всех и безопасной среды.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Мы разрабатываем и используем инструменты и предлагаем
                   участникам нашего сообщества ресурсы, помогающие обеспечить в
@@ -98,11 +98,11 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Разработка и использование технологий, которые помогают нам
                 обслуживать наше растущее сообщество.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Организация и анализ информации в рамках растущего сообщества
                   VMIRE очень важны для нашего Сервиса. Значительной его
@@ -117,11 +117,11 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Связь между вами и интересующими вас брендами, товарами и
                 услугами.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Мы используем данные из VMIRE, а также от сторонних партнеров,
                   чтобы показывать вам рекламу, предложения и другой спонсорский
@@ -133,10 +133,10 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Исследования и инновации.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Мы используем имеющуюся у нас информацию, чтобы разрабатывать,
                   тестировать и улучшать наш Сервис и в сотрудничестве с другими
@@ -151,11 +151,11 @@ const Agreement = () => {
             </div>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Финансирование нашего Сервиса
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Вы не будете оплачивать использование VMIRE, однако, используя
               Сервис, на который распространяются настоящие Условия, вы тем
@@ -193,33 +193,33 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Политика использования данных
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Для предоставления нашего Сервиса нам необходимо собирать и
               использовать вашу информацию.
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Ваши обязательства
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               В обмен на наше обязательство предоставлять Сервис вы должны взять
               на себя следующие обязательства перед нами.
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Сбор данных
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               При вашем согласии мы собираем контактные данные из вашей записной
               книги телефона для построения связей внутри сети и автоматических
@@ -229,11 +229,11 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Кто может использовать VMIRE.
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Мы хотим, чтобы наш Сервис был максимально открытым и доступным
               для всех, но вместе с тем безопасным, защищенным и соответствующим
@@ -257,23 +257,23 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Запрещенные способы использования VMIRE
           </h2>
-          <div className='flex flex-col gap-2 mb-7'>
+          <div className="flex flex-col gap-2 mb-7">
             <p>
               Предоставление безопасного и открытого Сервиса широкому сообществу
               требует, чтобы каждый из нас соблюдал правила.
             </p>
           </div>
-          <div className='flex flex-col gap-5 pl-8'>
+          <div className="flex flex-col gap-5 pl-8">
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы не имеете права выдавать себя за других людей или
                 предоставлять неточную информацию.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Вы не обязаны раскрывать свою личность в Instagram, но вы
                   должны предоставить нам точную и актуальную информацию (в том
@@ -286,18 +286,18 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы не имеете права совершать незаконные, вводящие в заблуждение
                 или обманные действия либо иные действия в незаконных или
                 несанкционированных целях.
               </h3>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы не имеете права нарушать (а также помогать другим лицам или
                 призывать их нарушать) настоящие Условия или наши правила.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Публикуя брендированный контент, вы должны соблюдать наши
                   правила, которые предусматривают обязательное использование
@@ -306,11 +306,11 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы не имеете права препятствовать нормальной работе Сервиса или
                 вмешиваться в его работу.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Сюда относится ненадлежащее использование каналов для жалоб,
                   споров и запросов на обжалование, например отправка
@@ -320,12 +320,12 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы не имеете права предпринимать попытки создания аккаунтов,
                 сбора информации или доступа к ней несанкционированными
                 способами.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Сюда относятся создание аккаунтов или сбор информации с
                   помощью автоматизированных средств без нашего прямого
@@ -334,12 +334,12 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы не имеете права продавать, передавать по лицензии или
                 покупать какие-либо аккаунты или данные, полученные от нас или
                 из нашего Сервиса.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Сюда относятся попытки покупки, продажи или передачи
                   каких-либо данных вашего аккаунта (в том числе вашего имени
@@ -351,7 +351,7 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы не имеете права без разрешения публиковать личную или
                 конфиденциальную информацию пользователей или иным способом
                 нарушать чьи-либо права, в том числе права на интеллектуальную
@@ -359,7 +359,7 @@ const Agreement = () => {
                 на товарный знак, распространения контрафактных или пиратских
                 товаров).
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Вы вправе использовать чужие работы в соответствии с
                   исключениями или ограничениями в отношении авторского права и
@@ -371,14 +371,14 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold'>
+              <h3 className="text-lg font-semibold">
                 Вы не имеете права изменять, переводить или реконструировать
                 какие-либо наши продукты или их компоненты либо пытаться создать
                 производные работы на их основе.
               </h3>
             </div>
             <div>
-              <h3 className='text-lg font-semibold'>
+              <h3 className="text-lg font-semibold">
                 Вы не имеете права использовать в своем имени пользователя
                 доменное имя или URL без нашего предварительного письменного
                 согласия.
@@ -386,23 +386,23 @@ const Agreement = () => {
             </div>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Разрешения, которые вы предоставляете нам.
           </h2>
-          <div className='flex flex-col gap-2 mb-7'>
+          <div className="flex flex-col gap-2 mb-7">
             <p>
               В рамках нашего соглашения вы также даете нам разрешения,
               необходимые для предоставления Сервиса.
             </p>
           </div>
-          <div className='flex flex-col gap-5 pl-8'>
+          <div className="flex flex-col gap-5 pl-8">
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Мы не заявляем прав собственности на ваш контент, но вы даете
                 нам лицензию на его использование.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Ваши права на ваш контент остаются неизменными. Мы не заявляем
                   прав собственности на ваш контент, который вы публикуете в
@@ -428,12 +428,12 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Использование вашего имени пользователя, фото профиля и
                 информации о ваших отношениях и действиях в связи с аккаунтами,
                 рекламой и спонсорским контентом.
               </h3>
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 <p>
                   Ваше имя пользователя, фото профиля и информация о ваших
                   действиях (например, отметках "Нравится") или отношениях
@@ -453,18 +453,18 @@ const Agreement = () => {
               </div>
             </div>
             <div>
-              <h3 className='text-lg font-semibold mb-3 max-sm:text-sm'>
+              <h3 className="text-lg font-semibold mb-3 max-sm:text-sm">
                 Вы соглашаетесь с тем, что мы можем скачивать и устанавливать
                 обновления Сервиса на ваше устройство.
               </h3>
             </div>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Дополнительные права, которые мы сохраняем за собой
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Если вы выбираете имя пользователя или аналогичное средство
               идентификации для своего аккаунта, мы оставляем за собой право
@@ -493,12 +493,12 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Удаление контента и временное или постоянное отключение вашего
             аккаунта
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Мы вправе удалить любой контент или информацию, которыми вы
               делитесь в Сервисе, если сочтем, что они нарушают настоящие
@@ -605,11 +605,11 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Наше соглашение и последствия наших разногласий Наше соглашение.
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Если какой-либо аспект настоящего соглашения не имеет юридической
               силы, остальные аспекты остаются в силе.
@@ -623,11 +623,11 @@ const Agreement = () => {
             <p>Мы оставляем за собой все права, не предоставленные вам явно.</p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Кто обладает правами по настоящему соглашению.
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Настоящее соглашение не дает никаких прав третьим сторонам. Вам
               запрещается передавать свои права или обязанности по настоящему
@@ -638,11 +638,11 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Кто понесет ответственность, если что-нибудь случится.
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               Мы несем ответственность лишь в следующих случаях: Мы несем
               неограниченную ответственность в соответствии с положениями
@@ -664,11 +664,11 @@ const Agreement = () => {
             </p>
           </div>
         </div>
-        <div className='mb-7'>
-          <h2 className='text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4'>
+        <div className="mb-7">
+          <h2 className="text-2xl font-bold mb-6 max-sm:text-lg max-sm:mb-4">
             Как мы решаем споры.
           </h2>
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <p>
               При возникновении претензии или спора, обусловленных или связанных
               с использованием вами Сервиса как потребителем, мы с вами

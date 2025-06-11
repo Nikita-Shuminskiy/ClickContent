@@ -25,9 +25,9 @@ export const FakeProgressBar = () => {
   }, []);
 
   return (
-    <div className='h-1 rounded-full bg-white'>
+    <div className="h-1 rounded-full bg-white">
       <div
-        className='h-1 bg-[#874ab0] rounded-full'
+        className="h-1 bg-[#874ab0] rounded-full"
         style={{ width: completed + "%" }}
       ></div>
     </div>

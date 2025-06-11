@@ -14,14 +14,26 @@ export interface InputUIProps
 
 const InputField = React.forwardRef(
   (
-    { label, value, placeholder, onInput, classes, isFromLanding, ...rest }: InputUIProps,
+    {
+      label,
+      value,
+      placeholder,
+      onInput,
+      classes,
+      isFromLanding,
+      ...rest
+    }: InputUIProps,
     ref: LegacyRef<HTMLTextAreaElement> | undefined,
   ) => {
     return (
-      <div className={`block w-full inputUI relative min-h-[120px] bg-[#1A1A1A] rounded-2xl pt-[10%] pb-[10px]`}>
+      <div
+        className={`block w-full inputUI relative min-h-[120px] bg-[#1A1A1A] rounded-2xl pt-[10%] pb-[10px]`}
+      >
         <textarea
           id={`textarea-${label}-${value}`}
-          className={`block min-h-[70px] ${isFromLanding ? 'px-2' : 'px-5'} font-normal text-white bg-transparent w-full disabled:opacity-40 disabled:cursor-not-allowed  appearance-none focus:outline-none focus:ring-0 peer  resize-none  ${
+          className={`block min-h-[70px] ${
+            isFromLanding ? "px-2" : "px-5"
+          } font-normal text-white bg-transparent w-full disabled:opacity-40 disabled:cursor-not-allowed  appearance-none focus:outline-none focus:ring-0 peer  resize-none  ${
             classes ?? ""
           }`}
           // type='text'
@@ -33,7 +45,9 @@ const InputField = React.forwardRef(
         />
         <label
           htmlFor={`textarea-${label}-${value}`}
-          className={`w-full absolute text-[14px] max-xs:text-[10px] text-[#FFFFFF4D] duration-300 transform -translate-y-0 peer-focus:-translate-y-0  top-[15%] peer-focus:top-[8%]  z-10 origin-[0] ${isFromLanding ? 'px-2' : 'px-5 whitespace-pre overflow-hidden'} peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-[25%]`}
+          className={`w-full absolute text-[14px] max-xs:text-[10px] text-[#FFFFFF4D] duration-300 transform -translate-y-0 peer-focus:-translate-y-0  top-[15%] peer-focus:top-[8%]  z-10 origin-[0] ${
+            isFromLanding ? "px-2" : "px-5 whitespace-pre overflow-hidden"
+          } peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-[25%]`}
         >
           {!!value ? label : placeholder}
         </label>

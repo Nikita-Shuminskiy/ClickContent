@@ -9,8 +9,8 @@ const Resell = () => {
     useState(false);
 
   return (
-    <section className='pt-[80px] pb-[80px] max-sm:pt-[40px] max-sm:pb-[40px]'>
-      <div className='container'>
+    <section className="pt-[80px] pb-[80px] max-sm:pt-[40px] max-sm:pb-[40px]">
+      <div className="container">
         <QuickLinksResellForm
           onSuccess={(edited, created) => {
             if (created) {

@@ -1,4 +1,4 @@
-@use 'mixin';
+@use "mixin";
 
 #root {
   height: 100%;
@@ -17,13 +17,12 @@ input:-webkit-autofill {
   transition: all 100000s ease-in-out 0s;
 }
 
-
 body {
   font-family: "Steppe", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  background-color: #0E0E0E;
+  background-color: #0e0e0e;
   color: #fff;
   overflow-x: hidden;
 
@@ -48,8 +47,7 @@ body {
 }
 
 .gradient-image-landing {
-  background-image: linear-gradient(to bottom right,  #874AB0, #C07CED);
-
+  background-image: linear-gradient(to bottom right, #874ab0, #c07ced);
 }
 
 .logo {
@@ -102,7 +100,8 @@ body {
 
 .border-custom-dashed {
   height: 1px;
-  background: radial-gradient(4px 6px, #FFFFFF1A 80%, transparent 87%) 0 0/16px 100%;
+  background: radial-gradient(4px 6px, #ffffff1a 80%, transparent 87%) 0 0/16px
+    100%;
 }
 
 .bg-vmire-color-purple-secondary {
@@ -196,7 +195,7 @@ body {
   padding: 0;
 
   &::after {
-    background: none
+    background: none;
   }
 }
 
@@ -266,19 +265,18 @@ body {
     display: none;
   }
 }
-.swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 16px!important;
-  padding: 10px!important;
-
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 16px !important;
+  padding: 10px !important;
 }
-.swiper-button-prev{
-  width: 40px!important;
+.swiper-button-prev {
+  width: 40px !important;
 }
 .swiper-button-next {
-  width: 40px!important;
+  width: 40px !important;
 }
 
 .PhoneInputCountrySelect {
-  background-color: gray!important;
+  background-color: gray !important;
 }
-

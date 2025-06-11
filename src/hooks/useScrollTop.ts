@@ -1,8 +1,7 @@
-import { useCallback } from 'react';
+import { useCallback } from "react";
 
 export const useScrollToTop = () => {
-    return useCallback(() => {
-        window.scrollTo(0, 0);
-    }, []);
+  return useCallback(() => {
+    window.scrollTo(0, 0);
+  }, []);
 };
-

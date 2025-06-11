@@ -1,23 +1,24 @@
 import errorIcon from "@/assets/images/icons/error-icon.svg";
 
 type Props = {
-  error?: any
+  error?: any;
   excludeFeilds?: string[];
 };
 
 const ErrorApiUI = ({ error, excludeFeilds = [] }: Props) => {
-
   const validationErrorMessage = (str) => {
     // проверка на русские буквы, символы
-    return /^[а-яА-ЯёЁ0-9\s.,!?@#\$%\^&\*\(\)_\+\-=\[\]\{\};:'"\\|,<>\./\?\~`]+$/.test(str);
+    return /^[а-яА-ЯёЁ0-9\s.,!?@#\$%\^&\*\(\)_\+\-=\[\]\{\};:'"\\|,<>\./\?\~`]+$/.test(
+      str,
+    );
   };
-  const errorMessage = 'Ошибка сервера, попробуйте позже';
+  const errorMessage = "Ошибка сервера, попробуйте позже";
   //validationErrorMessage(error?.getMessage()) ? error?.getMessage() :
   return (
     <>
       {!!error && (
-        <p className='flex items-center gap-2 text-red-500 py-3'>
-          <img className='w-4 h-4 object-cover' src={errorIcon} alt='Ошибка' />
+        <p className="flex items-center gap-2 text-red-500 py-3">
+          <img className="w-4 h-4 object-cover" src={errorIcon} alt="Ошибка" />
           {errorMessage}
         </p>
       )}

@@ -1,9 +1,9 @@
-﻿import { createCopyQuickLink } from "@/helpers/CreateCopyLinks.ts"
-import { Dispatch, SetStateAction, useState } from "react"
-import { ModalUI } from "@components/ui/ModalUI"
-import { SuccessModalUI } from "@components/ui/SuccessModalUI"
-import QuickLinksResellForm from "./QuickLinksResellForm.tsx"
-import { IQuickLinkDto } from '@/data-contracts.ts'
+﻿import { createCopyQuickLink } from "@/helpers/CreateCopyLinks.ts";
+import { Dispatch, SetStateAction, useState } from "react";
+import { ModalUI } from "@components/ui/ModalUI";
+import { SuccessModalUI } from "@components/ui/SuccessModalUI";
+import QuickLinksResellForm from "./QuickLinksResellForm.tsx";
+import { IQuickLinkDto } from "@/data-contracts.ts";
 
 interface QuickLinksResellFormModalProps {
   isOpen: boolean;
@@ -24,7 +24,7 @@ const QuickLinksResellFormModal = ({
   return (
     <>
       <ModalUI isOpen={isOpen} setOpen={setOpen} maxWidth={800}>
-        <h3 className='text-[32px] text-center font-bold mb-8 max-sm:text-base'>
+        <h3 className="text-[32px] text-center font-bold mb-8 max-sm:text-base">
           Создание перепродажной ссылки
         </h3>
         <QuickLinksResellForm

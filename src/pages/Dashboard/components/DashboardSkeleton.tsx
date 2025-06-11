@@ -1,5 +1,5 @@
 import React from "react";
-import {SkeletonUI} from "@components/ui/SkeletonUI";
+import { SkeletonUI } from "@components/ui/SkeletonUI";
 
 export const DashboardSkeleton = () => {
   return (
@@ -18,37 +18,51 @@ export const DashboardSkeleton = () => {
               </SkeletonUI>
             </div>
             <div className="rounded-[32px] w-[100%] h-[574px] bg-[#141414]  p-[40px] max-sm:p-[20px]">
-                <SkeletonUI>
-                    <rect x="0" y="0" rx="8" ry="8" width="25%" height="30"/>
-                    <rect x="80%" y="0" rx="8" ry="8" width="20%" height="30"/>
+              <SkeletonUI>
+                <rect x="0" y="0" rx="8" ry="8" width="25%" height="30" />
+                <rect x="80%" y="0" rx="8" ry="8" width="20%" height="30" />
 
-                    <rect x="0" y="50" rx="16" ry="16" width="40%" height="185"/>
-                    <rect x="45%" y="50" rx="16" ry="16" width="40%" height="185"/>
-                    <rect x="90%" y="50" rx="16" ry="16" width="15%" height="185"/>
+                <rect x="0" y="50" rx="16" ry="16" width="40%" height="185" />
+                <rect x="45%" y="50" rx="16" ry="16" width="40%" height="185" />
+                <rect x="90%" y="50" rx="16" ry="16" width="15%" height="185" />
 
-                    <rect x="0" y="250" rx="8" ry="8" width="25%" height="30"/>
-                    <rect x="80%" y="250" rx="8" ry="8" width="20%" height="30"/>
+                <rect x="0" y="250" rx="8" ry="8" width="25%" height="30" />
+                <rect x="80%" y="250" rx="8" ry="8" width="20%" height="30" />
 
-                    <rect x="0" y="300" rx="16" ry="16" width="40%" height="185"/>
-                    <rect x="45%" y="300" rx="16" ry="16" width="40%" height="185"/>
-                    <rect x="90%" y="300" rx="16" ry="16" width="15%" height="185"/>
-                </SkeletonUI>
+                <rect x="0" y="300" rx="16" ry="16" width="40%" height="185" />
+                <rect
+                  x="45%"
+                  y="300"
+                  rx="16"
+                  ry="16"
+                  width="40%"
+                  height="185"
+                />
+                <rect
+                  x="90%"
+                  y="300"
+                  rx="16"
+                  ry="16"
+                  width="15%"
+                  height="185"
+                />
+              </SkeletonUI>
             </div>
           </div>
-            <div className="flex flex-col gap-[16px]  w-full">
-                <div className="rounded-[32px] w-[100%] h-[482px] bg-[#141414]  p-[40px] max-sm:p-[20px]">
-                    <SkeletonUI>
-                        <rect x="0" y="0" rx="8" ry="8" width="20%" height="30"/>
-                        <rect x="80%" y="0" rx="8" ry="8" width="20%" height="30"/>
-                    </SkeletonUI>
-                </div>
-                <div className="rounded-[32px] w-[100%] h-[348px] bg-[#141414]  p-[40px] max-sm:p-[20px]">
-                    <SkeletonUI>
-                        <rect x="0" y="0" rx="8" ry="8" width="40%" height="30"/>
-                        <rect x="80%" y="0" rx="8" ry="8" width="20%" height="30"/>
-                    </SkeletonUI>
-                </div>
+          <div className="flex flex-col gap-[16px]  w-full">
+            <div className="rounded-[32px] w-[100%] h-[482px] bg-[#141414]  p-[40px] max-sm:p-[20px]">
+              <SkeletonUI>
+                <rect x="0" y="0" rx="8" ry="8" width="20%" height="30" />
+                <rect x="80%" y="0" rx="8" ry="8" width="20%" height="30" />
+              </SkeletonUI>
             </div>
+            <div className="rounded-[32px] w-[100%] h-[348px] bg-[#141414]  p-[40px] max-sm:p-[20px]">
+              <SkeletonUI>
+                <rect x="0" y="0" rx="8" ry="8" width="40%" height="30" />
+                <rect x="80%" y="0" rx="8" ry="8" width="20%" height="30" />
+              </SkeletonUI>
+            </div>
+          </div>
         </div>
       </div>
     </section>

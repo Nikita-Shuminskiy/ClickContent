@@ -1,4 +1,3 @@
-
 export const createCopyQuickLink = (linkId: string) => {
   return `https://clickcontent.eu/p/${linkId}`;
 };
@@ -7,8 +6,7 @@ export const createCopyDonateLink = (nickname: string) => {
   return `https://clickcontent.eu/d/${nickname.toLowerCase()}`;
 };
 
-export const createCopyTargetLink = (linkId: string, userNickName:string) => {
-
+export const createCopyTargetLink = (linkId: string, userNickName: string) => {
   return `https://clickcontent.eu/d/${userNickName?.toLowerCase()}/${linkId}`;
 };
 
@@ -16,7 +14,7 @@ export const createCreativeLink = (
   linkId: string,
   creativeLink: any,
   linkType: "aim" | "quicklink",
-  userNickName:string
+  userNickName: string,
 ) => {
   const copyLink =
     linkType === "quicklink"
